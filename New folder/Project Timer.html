@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div class="sticky">Seasons Greetings!!!</div>
+    
+    <style>
+        div{
+            text-align: center;
+            text-decoration: underline;
+            color: red;
+            padding: 35px;
+            overflow: hidden;
+            background-color: white;
+            font-size: 50px;
+            
+        }
+        div.sticky {
+position: -webkit-sticky;
+position: sticky;
+top: 0;
+padding: 5px;
+background-color: #ffffff;
+border: 10px solid #ec0808;
+}
+ img{
+    float: top ;
+ }       
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <h2 style="text-align: right;">Don't Miss Out on The Giveaway Of The Year</h2>
+    <h2 style="text-align: right;">Get A Brand New Headphone</h2>
+    <h2>Be aware that this giveaway will only last within the range of 10 days</h2>
+   <h2>So get yours while they are still available😉</h2>
+   <style>
+        body{
+            
+    
+      
+        }
+        h2{
+            color: green;
+            font-size: 30px;
+            padding-left: 23px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            background-color: white;
+            border: 20px;
+        }
+    </style>
+    <img src="IMG-20231203-WA0090.jpg" alt="" width="400" height="400">
+    <style>
+        .countdown-box {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: black;
+        }
+    </style>
+    </head>
+    <body>
+    
+        <div id="countdown"></div>
+
+        <script>
+        function startCountdown() {
+          // Set the date for 10 days from now
+          var endDate = new Date();
+          endDate.setDate(endDate.getDate() + 10);
+        
+          // Update the countdown every second
+          var countdown = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = endDate - now;
+        
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+            // Display the countdown
+            document.getElementById("countdown").innerHTML = "Countdown: " + days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+        
+            // If the countdown is over, restart it
+            if (distance < 0) {
+              clearInterval(countdown);
+              document.getElementById("countdown").innerHTML = "EXPIRED";
+              startCountdown(); // Restart the countdown
+            }
+          }, 1000);
+        }
+        
+        // Start the countdown initially
+        startCountdown();
+        </script>
+        
+
+    
+</body>
+</html>
